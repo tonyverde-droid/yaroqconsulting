@@ -136,7 +136,9 @@
 
       /* Cards (directions + divisions) */
       .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-      @media (max-width: 860px) { .cards { grid-template-columns: 1fr; } }
+      .cards-3 { grid-template-columns: repeat(3, 1fr); }
+      @media (max-width: 1020px) { .cards-3 { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 860px) { .cards { grid-template-columns: 1fr; } .cards-3 { grid-template-columns: 1fr; } }
       .card {
         background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
         padding: 30px 28px 26px; display: flex; flex-direction: column;
@@ -303,7 +305,7 @@
             <h2 data-i18n="div.title">Our divisions</h2>
             <p data-i18n="div.sub">The practice areas where the bridge applies, in either direction.</p>
           </div>
-          <div class="cards">
+          <div class="cards cards-3">
             <article class="card">
               <span class="num">01</span>
               <h3 data-i18n="div1.name">Private Aviation</h3>
@@ -313,7 +315,13 @@
             <article class="card">
               <span class="num">02</span>
               <h3 data-i18n="div2.name">Industrial & Energy</h3>
-              <p data-i18n="div2.line">Machinery, oil and infrastructure: advisory for industrial and energy projects, including road works.</p>
+              <p data-i18n="div2.line">Machinery and oil: advisory for industrial and energy projects.</p>
+              <a href="#contacto"><span data-i18n="card.cta">Discuss a project</span> →</a>
+            </article>
+            <article class="card">
+              <span class="num">03</span>
+              <h3 data-i18n="div3.name">Infrastructure & Roads</h3>
+              <p data-i18n="div3.line">Road construction and rehabilitation, highways and infrastructure projects: advisory from planning and sourcing through execution.</p>
               <a href="#contacto"><span data-i18n="card.cta">Discuss a project</span> →</a>
             </article>
           </div>
@@ -431,7 +439,9 @@
           "div1.name": "Aviación Privada",
           "div1.line": "Asesoría en compra y venta de aeronaves y repuestos, de la búsqueda al cierre.",
           "div2.name": "Industrial y Energía",
-          "div2.line": "Maquinaria, petróleo e infraestructura: asesoría para proyectos industriales y de energía, incluidas obras viales.",
+          "div2.line": "Maquinaria y petróleo: asesoría para proyectos industriales y de energía.",
+          "div3.name": "Infraestructura y Carreteras",
+          "div3.line": "Construcción y rehabilitación de carreteras, autopistas y proyectos de infraestructura: asesoría desde la planificación y el suministro hasta la ejecución.",
           "how.title": "Cómo trabajamos",
           "how.sub": "Un proceso corto y claro, igual en las dos direcciones.",
           "how1.t": "Conversación inicial",
@@ -486,7 +496,9 @@
           "div1.name": "Private Aviation",
           "div1.line": "Advisory on aircraft and parts transactions, from search to closing.",
           "div2.name": "Industrial & Energy",
-          "div2.line": "Machinery, oil and infrastructure: advisory for industrial and energy projects, including road works.",
+          "div2.line": "Machinery and oil: advisory for industrial and energy projects.",
+          "div3.name": "Infrastructure & Roads",
+          "div3.line": "Road construction and rehabilitation, highways and infrastructure projects: advisory from planning and sourcing through execution.",
           "how.title": "How we work",
           "how.sub": "A short, clear process, the same in both directions.",
           "how1.t": "Initial conversation",
